@@ -1,41 +1,12 @@
-<!-- layouts/partials/header.html -->
 <header class="header">
   <nav class="flex-row flex-space-between no-decoration">
     <div class="header-logo">
       <a class href="/">{{ site.Title }}</a>
     </div>
     <div class="header-menu">
-      {{- range site.Menus.main }}
-        <a href="{{ .URL }}" class="menu-item">
-            <md-icon>{{ .icon }}</md-icon>
-          {{- end }}
-          <span>{{ .Name }}</span>
-        </a>
+      {{- range site.menu.main }}
+        <a href="{{ .URL }}">{{ .Name }}</a>
       {{- end }}
     </div>
   </nav>
 </header>
-
-
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-<script type="module" src="https://esm.run/@material/web/icon/icon.js"></script>
-
-
-
-<style>
-.header-menu {
-  display: flex;
-  gap: 1rem;
-}
-
-.menu-item {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  text-decoration: none;
-}
-
-.menu-item md-icon {
-  font-size: 20px;
-}
-</style>
