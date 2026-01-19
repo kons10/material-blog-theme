@@ -1,6 +1,4 @@
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-<script type="module" src="https://esm.run/@material/web/icon/icon.js"></script>
-
+<!-- layouts/partials/header.html -->
 <header class="header">
   <nav class="flex-row flex-space-between no-decoration">
     <div class="header-logo">
@@ -9,11 +7,36 @@
     <div class="header-menu">
       {{- range site.Menus.main }}
         <a href="{{ .URL }}" class="menu-item">
-          {{- if .Params.icon }}
-            <md-icon>{{ .Params.icon }}</md-icon>
+          {{- with .Page.Params.icon }}
+            <md-icon>{{ . }}</md-icon>
           {{- end }}
+          <span>{{ .Name }}</span>
         </a>
       {{- end }}
     </div>
   </nav>
 </header>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+<script type="module" src="https://esm.run/@material/web/icon/icon.js"></script>
+
+
+
+<style>
+.header-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  text-decoration: none;
+}
+
+.menu-item md-icon {
+  font-size: 20px;
+}
+</style>
