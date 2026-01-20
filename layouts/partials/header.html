@@ -4,7 +4,7 @@
       <a class href="/">{{ site.Title }}</a>
     </div>
     <div class="header-menu">
-      {{- range site.menu.main }}
+      {{- range Site.Menus.main }}
         <md-icon-button href="{{ .URL }}">
           <md-icon>{{ .Name }}</md-icon>
         </md-icon-button>
