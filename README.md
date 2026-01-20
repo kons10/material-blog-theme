@@ -1,6 +1,6 @@
 # hugo-blog-theme
 
-A hugo theme for [m1yam0t0's blog](https://m1yam0t0.com/)
+A hugo theme for [kons10](https://hugo.kto.f5.si/)
 
 ## Install
 
