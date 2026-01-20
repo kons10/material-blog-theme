@@ -6,7 +6,7 @@
     <div class="header-menu">
       {{- range site.Menus.main }}
         <md-icon-button href="{{ .URL }}">
-          <md-icon>{{ .icon }}</md-icon>
+          <md-icon>{{ .Params.icon }}</md-icon>
         </md-icon-button>
       {{- end }}
     </div>
