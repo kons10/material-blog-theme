@@ -1,13 +1,13 @@
-# hugo-blog-theme
+# Material Design Blog Hugo
 
-A hugo theme for [kons10](https://hugo.kto.f5.si/)
+A blog hugo theme with Material Design
 
 ## Install
 
 ```sh
 mkdir theme
 cd theme
-git submodule add https://github.com/m1yam0t0/hugo-blog-theme.git hugo-blog-theme
+git submodule add https://github.com/kons10/material-blog-theme.git material
 ```
 
 ## Update
