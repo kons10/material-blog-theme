@@ -31,17 +31,25 @@ This is a example configuration.
   name = "Posts"
   url = "/posts/"
   weight = 1
+  [menu.main.params]
+    icon = "article"
 
 [[menu.main]]
   name = "Tags"
   url = "/tags/"
   weight = 2
+  [menu.main.params]
+    icon = "label"
 
 [[menu.main]]
   name = "About"
   url = "/about/"
   weight = 3
+  [menu.main.params]
+    icon = "info"
 ```
+
+**Note:** The `icon` parameter is optional. If provided, the menu will display Material Design icons. If omitted, it will display text links instead. You can find available icon names at [Google Fonts Icons](https://fonts.google.com/icons).
 
 ### Social Links
 

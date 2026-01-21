@@ -1,13 +1,17 @@
 <header class="header">
   <nav class="flex-row flex-space-between no-decoration">
     <div class="header-logo">
-      <a class href="/">{{ site.Title }}</a>
+      <a href="/">{{ site.Title }}</a>
     </div>
     <div class="header-menu">
       {{- range site.Menus.main }}
-        <md-icon-button href="{{ .URL }}">
-          <md-icon>{{ .Params.icon }}</md-icon>
-        </md-icon-button>
+        {{- if .Params.icon }}
+          <md-icon-button href="{{ .URL }}" aria-label="{{ .Name }}">
+            <md-icon>{{ .Params.icon }}</md-icon>
+          </md-icon-button>
+        {{- else }}
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        {{- end }}
       {{- end }}
     </div>
   </nav>
